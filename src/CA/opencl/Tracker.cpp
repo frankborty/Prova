@@ -26,8 +26,8 @@
 
 #if TRACKINGITSU_OCL_MODE
 #include <CL/cl.hpp>
-#include <clogs/clogs.h>
-#include <clogs/scan.h>
+//#include <clogs/clogs.h>
+//#include <clogs/scan.h>
 #include "ITSReconstruction/CA/gpu/myThresholds.h"
 #endif
 
@@ -204,7 +204,7 @@ void TrackerTraits<true>::computeLayerTracklets(CA::PrimaryVertexContext& primar
 		t2 = clock();
 		float countTrack = ((float) t2 - (float) t1) / (CLOCKS_PER_SEC / 1000);
 		std::cout<< "countTrack time " << countTrack <<" ms" << std::endl;
-
+/*
 		//scan
 		//std::cout<<"scan and sort"<<std::endl;
 		t1=clock();
@@ -257,7 +257,7 @@ void TrackerTraits<true>::computeLayerTracklets(CA::PrimaryVertexContext& primar
 				for(int j=0;j<clustersNum;j++)
 					outFileLookUp<<j<<"\t"<<lookUpFound[j]<<"\n";
 */
-
+/*
 			}
 			else{
 				clogs::ScanProblem problem;
@@ -298,7 +298,7 @@ void TrackerTraits<true>::computeLayerTracklets(CA::PrimaryVertexContext& primar
 			//std::cout<< "\t " << iLayer <<" time = "<<time<<" ms" << std::endl;
 		}
 		//std::cout<<"finish sort"<<std::endl;
-		t2 = clock();
+/*		t2 = clock();
 		float scanTrack = ((float) t2 - (float) t1) / (CLOCKS_PER_SEC / 1000);
 		std::cout<< "scanTrack time " << scanTrack <<" ms" << std::endl;
 

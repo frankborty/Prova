@@ -46,7 +46,7 @@ add_executable(tracking-itsu-main main.cpp)
 
 if(TRACKINGITSU_TARGET_DEVICE STREQUAL OPEN_CL)
 target_link_libraries(tracking-itsu-main src ${OpenCL_LIBRARIES})
-target_link_libraries(tracking-itsu-main src /opt/clogs/usr/local/lib/libclogs.so)
+#target_link_libraries(tracking-itsu-main src /opt/clogs/usr/local/lib/libclogs.so)
 endif(TRACKINGITSU_TARGET_DEVICE STREQUAL OPEN_CL)
 
 
