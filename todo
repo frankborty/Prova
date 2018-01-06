@@ -1,0 +1,3 @@
+le costanti definite in "Constants" ma che vengono usate
+anche all'interno dei kernel posso definirle in un include 
+esterno in C (non C++) che può essere visto e usato da tutti i kernel

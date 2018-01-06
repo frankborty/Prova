@@ -1,0 +1,29 @@
+#############
+#   CMAKE   #
+#############
+> cmake-clang
+cmake -E chdir ${ConfigName}/ cmake -G "Unix Makefiles" ../ -DCMAKE_BUILD_TYPE=${ConfigName} -DCMAKE_CXX_COMPILER=clang++
+
+> cmake-gcc
+cmake -E chdir ${ConfigName}/ cmake -G "Unix Makefiles" ../ -DCMAKE_BUILD_TYPE=${ConfigName} -DCMAKE_CXX_COMPILER=c++
+
+> cmake-clang-cuda
+cmake -E chdir ${ConfigName}/ cmake -G "Unix Makefiles" ../ -DCMAKE_BUILD_TYPE=${ConfigName} -DCMAKE_CXX_COMPILER=clang++ -DTRACKINGITSU_TARGET_DEVICE=GPU_CUDA
+
+> cmake-clang-gcc
+cmake -E chdir ${ConfigName}/ cmake -G "Unix Makefiles" ../ -DCMAKE_BUILD_TYPE=${ConfigName} -DCMAKE_CXX_COMPILER=g++ -DTRACKINGITSU_TARGET_DEVICE=GPU_CUDA
+
+############
+#   ROOT   #
+############
+> computing-time-benchmark
+root 'plotComputingTimeBenchmark.cxx("${ProjDirPath}/benchmarks/computing_time/")'
+
+> generate-pile-up-data
+root 'generatePileUpData.cxx(2, "${ProjDirPath}/benchmarks/benchmark_data/")'
+
+> memory-occupancy-benchmark
+root 'plotMemoryOccupancyBenchmark.cxx("${ProjDirPath}/benchmarks/benchmark_data/", "${ProjDirPath}/benchmarks/memory_occupancy/")'
+
+> transverse-momentum-benchmark
+root 'plotTransverseMomentumBenchmark.cxx("${ProjDirPath}/benchmarks/benchmark_data/", "${ProjDirPath}/benchmarks/transverse_momentum/")'
