@@ -291,7 +291,7 @@ void TrackerTraits<true>::computeLayerTracklets(CA::PrimaryVertexContext& primar
 
 				for(int j=0;j<clustersNum;j++)
 					outFileLookUp<<j<<"\t"<<lookUpFound[j]<<"\n";
-*/
+
 			}
 			//ty=clock();
 			//float time = ((float) ty - (float) tx) / (CLOCKS_PER_SEC / 1000);
@@ -362,12 +362,12 @@ void TrackerTraits<true>::computeLayerTracklets(CA::PrimaryVertexContext& primar
 				//outFileTracklet<<"["<<i<<"] "<<output[i].firstClusterIndex<<"\t"<<output[i].secondClusterIndex<<"\t"<<output[i].phiCoordinate<<"\t"<<output[i].tanLambda<<"\n";
 				outFileTracklet<<std::setprecision(6)<<output[i].firstClusterIndex<<"\t"<<output[i].secondClusterIndex<<"\t"<<output[i].phiCoordinate<<"\t"<<output[i].tanLambda<<"\n";
 			outFileTracklet<<"\n\n";
-*/
+
 			//ty=clock();
 			//float time = ((float) ty - (float) tx) / (CLOCKS_PER_SEC / 1000);
 			//std::cout<< "\tLayer " << iLayer <<" time = "<<time<<" ms" <<"\tWG = " <<workgroupSize<<std::endl;
 		}
-		//std::cout<<"finish trackletsFinding"<<std::endl;
+*/		//std::cout<<"finish trackletsFinding"<<std::endl;
 		t2 = clock();
 		float findTrack = ((float) t2 - (float) t1) / (CLOCKS_PER_SEC / 1000);
 		std::cout<< "findTrack time " << findTrack <<" ms" << std::endl;
